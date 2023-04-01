@@ -1,0 +1,73 @@
+:root {
+  --FrenchGray: #CACFD6;
+  --Azure: #D6E5E3;
+  --TiffanyBlue: #9FD8CB;
+  --HookersGreen: #517664;
+  --DrabDarkBrown: #2D3319;
+}
+html
+{
+  font-size: 20;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+.page
+{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: .75em solid var(--TiffanyBlue);
+  height: 97vh;
+  opacity: 90%;
+}
+
+#infocontainer
+{
+  position: absolute;
+  top: 10%;
+  background-color: var(--TiffanyBlue);
+  width: 17rem;
+  height: 7rem;
+}
+#title
+{
+  font-size: 3rem;
+  color: var(--DrabDarkBrown);
+  position: inherit;
+  right: 30px;
+  top: -20px;
+}
+#desciption
+{
+  font-size: 1.5rem;
+  color: var(--DrabDarkBrown);
+  position: inherit;
+  right: 30px;
+  top: 40px;
+}
+
+
+.linkContainer
+{
+  background-color: var(--TiffanyBlue);
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.link
+{
+  color: var(--DrabDarkBrown);
+  text-decoration: none;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.link:hover
+{
+  opacity: 50%;
+}
