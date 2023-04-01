@@ -7,12 +7,13 @@
 }
 html
 {
-  font-size: 20;
+  font-size: 15px;
 }
 body
 {
     margin: 0;
     padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -64,10 +65,19 @@ body
 {
   color: var(--DrabDarkBrown);
   text-decoration: none;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  font-size: 1rem;
 }
 .link:hover
 {
   opacity: 50%;
+}
+
+#logo
+{
+  position: absolute;
+  width: 40vh;
+  right: 30px;
+  bottom: 30px;
 }
