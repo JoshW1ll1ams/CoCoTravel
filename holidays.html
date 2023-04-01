@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Holiday Packages</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -16,13 +16,60 @@
 </div>
 
 
+<div class="textbox">
+  <h1 id="titleTextBox">HOLIDAY PACKAGES</h1>
+  <p id="desciptionTextBox">
+    
+    Our holiday price calculator is an incredibly useful tool that can help you estimate the cost of your upcoming trip. By inputting a range of information about your travel plans, the calculator can provide you with a rough estimate of how much you can expect to pay for things like flights, accommodation, and other expenses.</p>
+    
+    <form id="calculatorform">
+      
+      <div id="dates"><p>Departure date</p> <input id="arrivaldate" type="date" required><p>Arrival date</p> <input id="departdate" type="date" required></div>
+      <p>Please select a flight type from the options below:</p>
+
+      <div id="flighttype">
+        <p>Economy</p><input type="checkbox" id="economy"  checked >
+        <p>Business</p><input type="checkbox" id="business">
+        <p>First Class</p><input type="checkbox" id="firstclass">
+      </div>
+     
+      <div id="destinationbox">
+      <select name="holidays" id="holidaycal" required>
+        <option value="default" selected disabled>Please pick a destination</option>
+        <option value="Japan">Japan</option>
+        <option value="Italy">Italy</option>
+        <option value="Iceland">Iceland</option>
+        <option value="Costa Rica">Costa Rica</option>
+        <option value="China">China</option>
+      </select>
+     
+  
+      <p>Include accommodation?</p>
+      <input type="checkbox" id="accomodation">
+      </div>
+
+      <div id="prices">
+        <div id="flightPrice">
+          <p></p>
+          <p id="priceflight"></p>
+        </div>
+        <p id="accommodationText"></p>
+        <p id="accommodationTextSecond"></p>
+        <p id="totalPrice"></p>
+      </div>
+
+    <br>
+    <img id="subpagelogo" src="images/logo.png" alt="logo">
+    <br>
+  </div>
+  
 <footer>
 
 </footer>
 
 </div>
 <script src="navbar.js"></script>
-
+<script src="calculator.js"></script>
 </body>
 
 </html>

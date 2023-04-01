@@ -29,3 +29,6 @@ function ChangeImage()
 
 ChangeImage();
 startTimer();
+
+
+

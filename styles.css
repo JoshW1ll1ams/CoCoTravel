@@ -14,6 +14,7 @@ body
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
+
 }
 
 
@@ -22,8 +23,7 @@ body
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border: .75em solid var(--TiffanyBlue);
-  height: 97vh;
+  height: 100vh;
   opacity: 90%;
 }
 
@@ -43,6 +43,19 @@ body
   right: 30px;
   top: -20px;
 }
+#titleTextBox
+{
+  font-size: 3rem;
+  color: var(--DrabDarkBrown);
+  margin: 5vh;
+}
+#desciptionTextBox
+{
+  font-size: 1rem;
+  color: var(--DrabDarkBrown);
+  margin: 5vh;
+}
+
 #desciption
 {
   font-size: 1.5rem;
@@ -57,6 +70,7 @@ body
 {
   background-color: var(--TiffanyBlue);
   height: 2rem;
+  padding-top: .6rem;
   display: flex;
   justify-content: center;
 }
@@ -80,4 +94,68 @@ body
   width: 40vh;
   right: 30px;
   bottom: 30px;
+}
+
+.textbox
+{
+  text-align: center;
+  background-color: var(--Azure);
+  position: relative;
+  margin: 5%;
+  padding-bottom: 1%;
+}
+
+#subpagelogo
+{
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+#calculatorform
+{
+  background-color: var(--TiffanyBlue);
+  width: 50%;
+  margin-left: 25%;
+}
+#dates
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+#flighttype
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#destinationbox
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#prices
+{
+
+  background-color: var(--DrabDarkBrown);
+  color: var(--Azure);
+  margin: 5%;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+#flightPrice
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre;
+  margin-bottom: -15px;
 }
