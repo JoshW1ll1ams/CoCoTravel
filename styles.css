@@ -159,3 +159,7 @@ body
   white-space: pre;
   margin-bottom: -15px;
 }
+.hidden
+{
+  visibility: hidden;
+}

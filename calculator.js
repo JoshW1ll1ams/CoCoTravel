@@ -29,24 +29,17 @@ const firstClassCheckbox = document.querySelector("#firstclass");
     }
   });
 
-
-document.querySelector("#calculatorform").addEventListener("submit", function(event) 
-{
-    event.preventDefault();
-    if (document.querySelector("#holidaycal").value == "default") 
-    {
-      alert("Please select a valid destination.");
-      return false;
-    }
-});
-
-
-
 let currentLocation;
+const priceBox = document.querySelector("#prices")
 document.querySelector("#calculatorform").addEventListener("change", function(event) 
 {
     currentLocation = document.querySelector("#holidaycal").value;
-    calculatePrice();
+    if(currentLocation != "default")
+    {
+        priceBox.classList.remove("hidden");
+        calculatePrice();
+    }
+    
 });
 
 function getPrice()
@@ -62,6 +55,11 @@ function getPrice()
 let BusinessValue = 250;
 let FirstClassValue = 450;
 let FlightExtra = 0;
+
+let arrivalDate;
+let departDate;
+let timeDiff;
+let dayDiff;
 
 function calculatePrice()
 {
@@ -80,16 +78,28 @@ function calculatePrice()
         document.querySelector("#priceflight").textContent += "+ First Class (£"+FirstClassValue+")";
         FlightExtra = FirstClassValue;
     }
-    const arrivalDate = new Date(document.querySelector("#arrivaldate").value);
-    const departDate = new Date(document.querySelector("#departdate").value);
-    const timeDiff = departDate.getTime() - arrivalDate.getTime();
-    const dayDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    arrivalDate = new Date(document.querySelector("#arrivaldate").value);
+    departDate = new Date(document.querySelector("#departdate").value);
+    timeDiff = departDate.getTime() - arrivalDate.getTime();
+    dayDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
    
 
-    if(document.querySelector("#accomodation").checked)
+    if(document.querySelector("#accomodation").checked && isNaN(arrivalDate) == false && isNaN(departDate) == false && dayDiff>=1)
     {
         document.querySelector("#accommodationText").textContent = currentLocation+ " accomodation perday (£"+Math.round((getPrice()/3))+")"
-        document.querySelector("#accommodationTextSecond").textContent = "For "+(dayDiff-1)+" nights, Accommodation Total (£"+ ((Math.round((getPrice()/3)))*(dayDiff-1))+")";
-        document.querySelector("#totalPrice").textContent = "Total price: £"+ (((Math.round((getPrice()/3)))*(dayDiff-1))+FlightExtra);
+        document.querySelector("#accommodationTextSecond").textContent = "For "+(dayDiff)+" nights, Accommodation Total (£"+ ((Math.round((getPrice()/3)))*(dayDiff))+")";
+        document.querySelector("#totalPrice").textContent = "Total price: £"+ (((Math.round((getPrice()/3)))*(dayDiff))+FlightExtra+(getPrice()));
     }
+    else
+    {
+        document.querySelector("#accommodationText").textContent = "";
+        if(document.querySelector("#accomodation").checked)
+            {
+            document.querySelector("#accommodationText").textContent = "Please enter a valid date to see accommodation pricing.";
+            }
+        document.querySelector("#accommodationTextSecond").textContent = "";
+        document.querySelector("#totalPrice").textContent = "Total price: £"+ (getPrice()+FlightExtra);
+    }
+    
 }
+
