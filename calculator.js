@@ -4,6 +4,10 @@ const economyCheckbox = document.querySelector("#economy");
 const businessCheckbox = document.querySelector("#business");
 const firstClassCheckbox = document.querySelector("#firstclass");
 
+const today = new Date().toISOString().split('T')[0];
+document.querySelector("#arrivaldate").setAttribute("min", today);
+document.querySelector("#departdate").setAttribute("min", today);
+
   economyCheckbox.addEventListener("change", function() {
     if (economyCheckbox.checked) {
       businessCheckbox.checked = false;
@@ -102,4 +106,5 @@ function calculatePrice()
     }
     
 }
+
 
