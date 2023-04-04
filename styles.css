@@ -16,6 +16,38 @@ body,html
   font-family: 'Oswald', sans-serif;
 }
 
+input[type="date"] 
+{
+  font-family: 'Oswald', sans-serif;
+  color: var(--HookersGreen);
+}
+
+input[type="checkbox"] 
+{
+  --checkbox-color: var(--DrabDarkBrown);
+}
+
+input[type="checkbox"] 
+{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--DrabDarkBrown);;
+  background-color: var(--TiffanyBlue);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked 
+{
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+select {
+  font-family: 'Oswald', sans-serif;
+}
+
 
 .page
 {
@@ -83,11 +115,13 @@ body,html
 
 .linkContainer
 {
+  position: relative;
   background-color: var(--TiffanyBlue);
   height: 2rem;
   padding-top: .6rem;
   display: flex;
   justify-content: center;
+  z-index: 3;
 }
 
 .link
@@ -182,7 +216,7 @@ body,html
 
 #footer
 {
-
+  position: relative;
   height: 50px;
   width: 100%;
   display: flex;
@@ -192,9 +226,30 @@ body,html
   color: var(--Azure);
   font-size:1rem;
   gap: 1.5rem;
+  z-index: 2;
 }
 
+.imagecontainer img
+{
+  height: 90vh;
+  width: 25vw;
 
+}
+.imagecontainer
+{
+  position: relative;
+  margin-top: -20vh;
+  margin-bottom: -20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#infotag
+{
+  margin-left: 43vw;
+}
 
 
 @media (max-width: 600px) {
