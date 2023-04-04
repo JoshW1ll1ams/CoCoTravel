@@ -22,6 +22,9 @@ body,html
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -93,6 +96,7 @@ body,html
   text-decoration: none;
   margin-left: 4vw;
   margin-right: 4vw;
+  padding-bottom: 1vh;
   font-size: 1rem;
 }
 .link:hover
@@ -178,7 +182,7 @@ body,html
 
 #footer
 {
-  position: absolute;
+
   height: 50px;
   width: 100%;
   display: flex;
@@ -187,6 +191,7 @@ body,html
   background-color: var(--DrabDarkBrown);
   color: var(--Azure);
   font-size:1rem;
+  gap: 1.5rem;
 }
 
 
@@ -200,7 +205,7 @@ body,html
   .linkContainer
     {
       flex-direction: column;
-      height: 12rem;
+      height: 16rem;
       padding-top: 0;
       align-items: center;
     }
@@ -259,6 +264,12 @@ body,html
       flex-direction: column;
       gap: .5rem;
     }
+  #calculatorform
+  {
+    background-color: var(--TiffanyBlue);
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
 
