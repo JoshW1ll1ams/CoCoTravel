@@ -29,10 +29,11 @@ input[type="checkbox"]
 
 input[type="checkbox"] 
 {
+  margin-top: 5px;
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border: 2px solid var(--DrabDarkBrown);;
   background-color: var(--TiffanyBlue);
   cursor: pointer;
@@ -246,11 +247,6 @@ select {
   z-index: 1;
 }
 
-#infotag
-{
-  margin-left: 43vw;
-}
-
 
 @media (max-width: 600px) {
     body,html
@@ -324,6 +320,16 @@ select {
     background-color: var(--TiffanyBlue);
     width: 80%;
     margin-left: 10%;
+  }
+  #img1,#img3,#img4
+  {
+    display: none;
+  }
+  
+  .imagecontainer img
+  {
+    height: 95%;
+    width: 100%;
   }
 }
 

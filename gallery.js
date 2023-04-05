@@ -72,10 +72,20 @@ function shiftImages()
 {
     checkCounter();
 
-    img1.setAttribute("src",images[counter])
-    img2.setAttribute("src",images[counter+1])
-    img3.setAttribute("src",images[counter+2])
-    img4.setAttribute("src",images[counter+3])
+    if (window.innerWidth >= 600) 
+    {
+        img1.setAttribute("src",images[counter])
+        img2.setAttribute("src",images[counter+1])
+        img3.setAttribute("src",images[counter+2])
+        img4.setAttribute("src",images[counter+3])
+    }
+    if (window.innerWidth <= 600 && counter < images.length-1) 
+    {
+        counter++;
+        if(counter == images.length-1) counter = 0;
+        img2.setAttribute("src",images[counter])
+    }
+
 }
 
 
