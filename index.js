@@ -71,7 +71,7 @@ function ChangeView()
 {
     if(currentSlide >= countries.length) currentSlide = 0;
 
-    Background.style.backgroundImage = "url(/images/"+countries[currentSlide].backgroundImage+".jpg)"
+    Background.style.backgroundImage = "url(images/"+countries[currentSlide].backgroundImage+".jpg)"
     Title.textContent = countries[currentSlide].title;
     Description.textContent = countries[currentSlide].description;
     countryOffset = countries[currentSlide].timeOffset-60;
